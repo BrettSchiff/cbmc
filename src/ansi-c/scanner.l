@@ -1290,6 +1290,10 @@ __decltype          { if(PARSER.cpp98 &&
                   loc(); return TOK_ACSL_EXISTS;
                 }
 
+"\\lambda"      { /* Non-standard, obviously. Found in ACSL syntax. */
+                  loc(); return TOK_ACSL_LAMBDA;
+                }
+
 "\\let"         { /* Non-standard, obviously. Found in ACSL syntax. */
                   loc(); return TOK_ACSL_LET;
                 }
