@@ -124,7 +124,7 @@ bool simplify_exprt::simplify_sign(exprt &expr)
       const auto value = numeric_cast<mp_integer>(expr.op0());
       if(value.has_value())
       {
-        expr.make_bool(*value >= 0);
+        expr.make_bool(*value < 0);
         return false;
       }
     }
